@@ -79,6 +79,102 @@
       font-size: 14px;
       line-height: 1.7;
     }
+ body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text-section {
+      width: 50%;
+    }
+
+    .text-section h2 {
+      color: #c00000;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      line-height: 1.9;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .text-section ul {
+      padding-right: 20px;
+      margin-top: 15px;
+    }
+
+    .text-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .image-grid {
+      width: 45%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 160px);
+      gap: 10px;
+    }
+
+    .image-grid div {
+      background-color: #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-grid div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 18px;
+    }
+
+    .cta-section p {
+      font-weight: bold;
+    }
+
+    .cta-section a {
+      display: inline-block;
+      color: #c00000;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid #c00000;
+      margin-top: 10px;
+    }
+
+    .brands {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-bottom: 50px;
+    }
+
+    .brands img {
+      height: 150px;
+      object-fit: contain;
+    }
+
+
 
     .left-section {
       text-align: left;
@@ -551,7 +647,7 @@
       <li><a href="d.html">MEMBERSHIP</a></li>
       <li><a href="#">ARTICLE & NEWS</a></li>
       <li><a href="#">EVENTS</a></li>
-      <li><a href="team.html">ACTIVITIES</a></li>
+      <li><a href="#">ACTIVITIES</a></li>
       <li><a href="#">COMPETITIONS</a></li>
       <li><a href="#">CONTACT</a></li>
       <li><a href="#">PARTNERS</a></li>
@@ -563,63 +659,51 @@
     <button>🔍</button>
   </div>
 
-  <!-- قسم الصور الجديد -->
-  <div class="grid-container">
-    <div class="grid-item item-1" style="background-image: url('a1.png');">
-      <h3>Villa La Moraleja | Vasco Vieira Arquitectos</h3>
-    </div>
-    <div class="grid-item" style="background-image: url('a1.png');">
-      <h3>The Yellow Box | Aslam Sham Architects</h3>
-    </div>
-    <div class="grid-item" style="background-image: url('a1.png');">
-      <h3>House for Lisa and Bert | Alpina Architects</h3>
-    </div>
-    <div class="grid-item" style="background-image: url('a1.png');">
-      <h3>Aga Khan Academy | Feilden Clegg Bradley Studios + Shatotto</h3>
-    </div>
-    <div class="grid-item" style="background-image: url('a1.png');">
-      <h3>El Campestre Park | CCA + Bernardo Quinzaños</h3>
-    </div>
-  </div>
-  <br>
-<div class="container">
-    <div class="main-grid">
-      <!-- Post 1 -->
-      <div class="post">
-        <img src="a1.png" alt="Project Image">
-        <div class="post-info">
-          <h3>Hai Au Restaurant | TAHA STUDIO</h3>
-          <p class="date">📅 June 7, 2025</p>
-          <p>Hai Au Restaurant is located on the land of the old restaurant, ...</p>
-        </div>
-      </div>
+   <div class="container">
+    <div class="text-section">
+      <h2>خدمات الشركاء والممولين</h2>
+      <p>نادي المعماريين الشباب يقدم منصة متكاملة في تطوير المشاريع والفرص الاستشارية والصناعية التي يقودها جيل جديد من المعماريين والرياديين. نعمل على تكوين شراكاتنا من خلال محتوى مصمّم، حملات تسويق، وتنفيذ مشروعات مبادرة ملموسة مع فئات المجتمع.</p>
 
-      <!-- Post 2 -->
-      <div class="post">
-        <img src="a1.png" alt="Project Image">
-        <div class="post-info">
-          <h3>Villa La Moraleja | Vasco Vieira Arquitectos</h3>
-          <p class="date">📅 June 6, 2025</p>
-          <p>From the beginning, the vision for Villa La Moraleja was clear — ...</p>
-        </div>
-      </div>
+      <h3>خدماتنا</h3>
+      <ul>
+        <li>إنتاج تقارير ومحتوى مرئي لتقديم محتوى بصري وإبداعي موجه للفئات المختلفة.</li>
+        <li>تنظيم فعاليات جماهيرية ومعمارية مسؤولة لزيادة التفاعل المجتمعي.</li>
+        <li>تصميم أساليب تسويقية مخصصة للمشاريع المعمارية والمنتجات المعمارية.</li>
+        <li>إعداد الأفلام الوثائقية المعمارية التي توثق التجارب المعمارية بمستوى احترافي.</li>
+      </ul>
+
+      <h3>لماذا نكوّن شركائنا معنا؟</h3>
+      <ul>
+        <li>لأننا نخلق مبادرات عمرانية مرتبطة بالأهداف المعمارية والصناعية.</li>
+        <li>لأننا نؤمن بتمكين المجتمعات العمرانية الحديثة لتطوير المستقبل الخاص مع جمهور متخصص من الشباب.</li>
+      </ul>
     </div>
 
-    <div class="sidebar">
-      <img src="a2.png" alt="Magazine Cover">
-      <img src="a2.png" alt="Magazine Set">
-      <div class="divider"></div>
-      <h4>Our Social Media</h4>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-tumblr"></i>
-        <i class="fab fa-pinterest-p"></i>
-      </div>
+    <div class="image-grid">
+      <div><img src="a1.png" alt=""></div>
+      <div><img src="a1.png" alt=""></div>
+      <div><img src="a2.png" alt=""></div>
+      <div><img src="AYC.png" alt=""></div>
+      <div><img src="AYC.png" alt=""></div>
+      <div><img src="a5.png" alt=""></div>
     </div>
   </div>
+
+  <div class="cta-section">
+    <p>إذا كنتم تبحثون عن شراكة قائمة على التأثير المعماري والمجتمعي الحقيقي، يسعدنا أن نناقش سبل التعاون المستقبلية معكم.</p>
+    <a href="#">[تواصل معنا | احجز اجتماعًا]</a>
+  </div>
+
+  <div class="brands">
+    <img src="z11PNG.PNG" alt="Shopify">
+    <img src="z1PNG.PNG" alt="Wayfair">
+    <img src="z3.JPG" alt="Google">
+    <img src="z5.png" alt="Peloton">
+    <img src="z7.JPG" alt="Instacart">
+    <img src="IMG_1915.JPG" alt="Amazon">
+    <img src="z10PNG.PNG" alt="Notion">
+  </div>
+
 <br><br>  <footer>
     <!-- القسم الأيمن: اللوغو والنص -->
     <div class="right-section">
