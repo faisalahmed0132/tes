@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بطاقات بوجهين - متجاوبة</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f5f5f5;
+      direction: rtl;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .card-wrapper {
+      perspective: 1000px;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Hover on desktop */
+    .card-wrapper:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    /* Mobile flip via class */
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .front {
+      background-color: #fff;
+    }
+
+    .front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(90%) contrast(110%);
+    }
+
+    .top-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      background-color: rgba(141, 138, 138, 0.95);
+      color: rgb(140, 4, 4);
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      z-index: 2;
+    }
+
+    .back {
+      background-color: #222;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+    }
+
+    .back h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #ff5555;
+    }
+
+    .back p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .back a {
+      background-color: #d10000;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back a:hover {
+      background-color: #a60000;
+    }
+
+    /* Responsive text size */
+    @media (max-width: 500px) {
+      .top-text { font-size: 14px; }
+      .back h3 { font-size: 16px; }
+      .back p, .back a { font-size: 13px; }
+    }
+  </style>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="image-grid">
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="card">
+        <div class="face front">
+          <div class="top-text">ورشة المعماريين الشباب</div>
+          <img src="AYC.png" alt="صورة الورشة">
+        </div>
+        <div class="face back">
+          <h3>تفاصيل الورشة</h3>
+          <p>انضم إلى ورشة المعماريين الشباب لاكتساب مهارات التصميم والنقد البنّاء من نخبة المعماريين.</p>
+          <a href="details.html"><i class="fas fa-arrow-left"></i> عرض المزيد</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="card">
+        <div class="face front">
+          <div class="top-text">المعرض الهندسي</div>
+          <img src="a2.png" alt="صورة المعرض">
+        </div>
+        <div class="face back">
+          <h3>تفاصيل المعرض</h3>
+          <p>اكتشف مشاريع طلاب العمارة الحديثة ضمن المعرض الوطني في بغداد.</p>
+          <a href="details.html"><i class="fas fa-arrow-left"></i> عرض المزيد</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(wrapper) {
+      const card = wrapper.querySelector('.card');
+      // إذا كانت شاشة صغيرة (موبايل)
+      if (window.innerWidth <= 768) {
+        card.classList.toggle('flip');
+      }
+    }
+  </script>
+
+</body>
+</html>
